@@ -108,5 +108,5 @@ if __name__ == '__main__':
         }
         return res_task
     
-    test.repo.save_new_task(create_task(tt))
+    print(test.repo.save_new_task(create_task(tt)))
     

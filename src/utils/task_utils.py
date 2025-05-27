@@ -7,4 +7,7 @@ def generate_GPID() -> str:
     return f"{day:%d%m%Y}-{num}"
 
 def generate_time() -> datetime:
-    return datetime.now()
+    now = datetime.now()
+    return f"{now:%d.%m.%Y-%H:%M:%S}"
+
+print(generate_time())
