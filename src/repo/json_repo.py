@@ -11,7 +11,7 @@ class JsonRepo(CommonMethods):
     def _check_file(self) -> bool:
         return self.repo.exists()
     
-    def _get_file_data_pointer(self) -> List[Dict] | None:
+    def _get_file_data_pointer(self) -> List | None:
         if not self._check_file():
             return None
         try:
@@ -22,7 +22,7 @@ class JsonRepo(CommonMethods):
         
     
     
-    def get_finished(self) -> List[Task] | None:
+    def get_finished(self) -> List | None:
         data = self._get_file_data_pointer()
         if not data:
             return None
@@ -77,9 +77,8 @@ class JsonRepo(CommonMethods):
         except Exception as e:
             return False      
 
-    def change_task_status(self):
+    def change_task_status(self, task: Task):
         pass
-
 
 if __name__ == '__main__':
     test = JsonRepo("tasks.json")
