@@ -97,27 +97,16 @@ if __name__ == '__main__':
     tt = test.template_add_task()
 
     from src.utils.task_utils import generate_GPID, generate_time
-    from src.models.task import Task
     def create_task(task):
         res_task = {
             'gpid' :  generate_GPID(),
             'header' : task.get("header"),
             'description' : task.get("description"),
-            'remarks' : None,
+            'reamarks' : None,
             'extra_status' : task.get("extra_status"),
             'time_created' : generate_time()
         }
         return res_task
     
-    def is_valid_task(task) -> bool:
-        """Проверяет соответствует ли задача необходимым атрибутам
-        Принимает: Task
-        Возвращает: True - соответсвует, False - в обратном случае"""
-
-        need_attribute = ["gpid", "header", "description", "remarks", "extra_status", "time_created"]
-        return all(k in task for k in need_attribute)
+    print(test.repo.save_new_task(create_task(tt)))
     
-    res_task = create_task(tt)
-    print(res_task)
-    print(is_valid_task(res_task))
-    test.repo.save_new_task(res_task)   
