@@ -25,7 +25,7 @@ class Task:
         Принимает: Task
         Возвращает: True - соответсвует, False - в обратном случае"""
 
-        need_attribute = ["GPID", "header", "description", "remarks", "extra_status", "time_created"]
+        need_attribute = ["gpid", "header", "description", "remarks", "extra_status", "time_created"]
         for attr in need_attribute:
             if not hasattr(task, attr):
                 return False
