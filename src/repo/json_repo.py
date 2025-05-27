@@ -5,7 +5,7 @@ from src.repo.base import CommonMethods
 from src.models.task import Task
 
 class JsonRepo(CommonMethods):
-    def __init__(self, file_name:str = 'test.json'):
+    def __init__(self, file_name:str = 'tasks.json'):
         self.repo = FILE_PATH / file_name
 
     def _check_file(self) -> bool:
@@ -80,6 +80,7 @@ class JsonRepo(CommonMethods):
     def change_task_status(self, task: Task):
         pass
 
+'''
 if __name__ == '__main__':
     test = JsonRepo("tasks.json")
     #print(test._chek_file())
@@ -95,7 +96,7 @@ if __name__ == '__main__':
     from src.utils.task_utils import generate_GPID, generate_time
     def create_task(task):
         res_task = {
-            'gpid' :  generate_GPID(),
+            'GPID' :  generate_GPID(),
             'header' : task.get("header"),
             'description' : task.get("description"),
             'reamarks' : None,
@@ -105,3 +106,4 @@ if __name__ == '__main__':
     try_task = create_task(test_create)
 
     print(test.save_new_task(try_task))
+'''

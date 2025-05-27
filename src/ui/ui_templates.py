@@ -69,6 +69,8 @@ class UiTemplates(UiMethods):
                 print("Заголовок задачи не может быть пустым")
             
         description = UiMethods.get_input("Добавьте подробное описание задачи: ")
+        if not description:
+            description = None
         while True:
             extra_status = UiMethods.get_input("Задача срочная?(1-д)(0-y): ")
             match extra_status:
@@ -99,10 +101,10 @@ if __name__ == '__main__':
     from src.utils.task_utils import generate_GPID, generate_time
     def create_task(task):
         res_task = {
-            'gpid' :  generate_GPID(),
+            'GPID' :  generate_GPID(),
             'header' : task.get("header"),
             'description' : task.get("description"),
-            'reamarks' : None,
+            'remarks' : None,
             'extra_status' : task.get("extra_status"),
             'time_created' : generate_time()
         }

@@ -1,22 +1,176 @@
 {
     "Задачи": {
-        "Завершены": [],
-        "Выполняются": [
+        "Завершены": [
             {
-                "gpid": "27052025-40",
-                "header": "Test UI",
-                "description": "Check",
-                "reamarks": null,
-                "extra_status": true,
-                "time_created": "27.05.2025-22:31:45"
+                "GPID": "0",
+                "Тема": "Разобраться с JSON",
+                "Подробное описание задачи": "Понять как правильно конвертировать данные для JSON формата"
             },
             {
-                "gpid": "27052025-87",
+                "GPID": "3",
+                "Тема": "абоба",
+                "Подробное описание задачи": "абобус иванов"
+            }
+        ],
+        "Выполняются": [
+            {
+                "GPID": "-1",
+                "Тема": "Задача на си",
+                "Подробное описание задачи": "Тот же проект должен быть сделан на си"
+            },
+            {
+                "GPID": "2",
+                "Тема": "Закончить с flask",
+                "Подробное описание задачи": "Добить пособие по фреймворку"
+            },
+            {
+                "GPID": "4",
+                "Тема": "GPID",
+                "Подробное описание задачи": "Настроить глобальное автозаполненение GPID для задач"
+            },
+            {
+                "GPID": "<function uuid4 at 0x741456faa980>",
+                "Тема": "a",
+                "Подробное описание задачи": "adadasdas"
+            },
+            {
+                "GPID": "05052025-15",
+                "Тема": "dada",
+                "Подробное описание задачи": "asdasdsd"
+            },
+            {
+                "GPID": "07052025-23",
+                "Тема": "Классы",
+                "Подробное описание задачи": "Жоско пососать на классах",
+                "Статус": "Не закончены"
+            },
+            {
+                "GPID": "07052025-80",
+                "Тема": "",
+                "Подробное описание задачи": ""
+            },
+            {
+                "GPID": "07052025-95",
+                "Тема": "ada",
+                "Подробное описание задачи": null
+            },
+            {
+                "GPID": "07052025-1",
+                "Тема": "dadadasda",
+                "Подробное описание задачи": null
+            },
+            {
+                "GPID": "07052025-22",
+                "Тема": "adasdas",
+                "Подробное описание задачи": "fsddfasd"
+            },
+            {
+                "GPID": "07052025-11",
+                "Тема": "daddasda",
+                "Подробное описание задачи": null
+            },
+            {
+                "GPID": "07052025-55",
+                "Тема": "dasda",
+                "Подробное описание задачи": null
+            },
+            {
+                "GPID": "07052025-99",
+                "Тема": "dadasdaddf",
+                "Подробное описание задачи": null
+            },
+            {
+                "GPID": "27052025-59",
                 "header": "Test UI",
                 "description": "Check",
                 "reamarks": null,
                 "extra_status": true,
-                "time_created": "27.05.2025-22:32:17"
+                "time_created": "27052025-22:45:10"
+            },
+            {
+                "GPID": "27052025-22",
+                "header": "Test UI",
+                "description": "Check",
+                "remarks": null,
+                "extra_status": true,
+                "time_created": "27052025-23:15:23"
+            },
+            {
+                "gpid": "28052025-01",
+                "header": "Test UI",
+                "description": "Check",
+                "reamarks": null,
+                "extra_status": true,
+                "time_created": "28052025-00:55:26"
+            },
+            {
+                "gpid": "28052025-01",
+                "header": "Test UI GPID",
+                "description": "Check Again",
+                "reamarks": null,
+                "extra_status": true,
+                "time_created": "28052025-00:55:56"
+            },
+            {
+                "gpid": "28052025-1",
+                "header": "Test GPID Again",
+                "description": "Again Check",
+                "reamarks": null,
+                "extra_status": true,
+                "time_created": "28052025-00:57:02"
+            },
+            {
+                "GPID": "28052025-1",
+                "header": "Test UI",
+                "description": "Check",
+                "reamarks": null,
+                "extra_status": true,
+                "time_created": "28052025-01:07:56"
+            },
+            {
+                "GPID": "28052025-2",
+                "header": "Check GPID",
+                "description": "Check",
+                "reamarks": null,
+                "extra_status": true,
+                "time_created": "28052025-01:08:18"
+            },
+            {
+                "GPID": "28052025-3",
+                "header": "Test GPID AGAIN",
+                "description": "Check Again",
+                "reamarks": null,
+                "extra_status": false,
+                "time_created": "28052025-01:08:44"
+            },
+            {
+                "GPID": "28052025-1",
+                "header": "тест в ЖРепе",
+                "description": "ща узнаем",
+                "reamarks": null,
+                "extra_status": true
+            },
+            {
+                "GPID": "28052025-1",
+                "header": "тест в ЖРепе",
+                "description": "ща узнаем",
+                "reamarks": null,
+                "extra_status": true
+            },
+            {
+                "GPID": "28052025-1",
+                "header": "тест в ЖРепе",
+                "description": "ща узнаем",
+                "reamarks": null,
+                "extra_status": true
+            },
+            {
+                "GPID": "28052025-4",
+                "header": "Again UI Test",
+                "description": "Check Again",
+                "remarks": null,
+                "extra_status": true,
+                "time_created": "28052025-01:30:20"
             }
         ]
     }
