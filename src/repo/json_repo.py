@@ -95,7 +95,7 @@ if __name__ == '__main__':
     from src.utils.task_utils import generate_GPID, generate_time
     def create_task(task):
         res_task = {
-            'gpid' :  generate_GPID(),
+            'GPID' :  generate_GPID(),
             'header' : task.get("header"),
             'description' : task.get("description"),
             'reamarks' : None,
