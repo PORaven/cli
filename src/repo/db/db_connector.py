@@ -1,4 +1,4 @@
-import mysql.connector as conn
+import pymysql as conn
 from typing import Dict
 
 class DBConnector():
@@ -7,6 +7,7 @@ class DBConnector():
         self.sql_config = CONFIG
 
     def __enter__(self):
+        print("🚨 CONNECTING TO:", self.sql_config)
         if self.sql_engine == "MySQL":
             self.sql_connect = conn.connect(**self.sql_config)
             self.sql_cursor = self.sql_connect.cursor()
@@ -17,7 +18,8 @@ class DBConnector():
     def __exit__(self, exc_type, exc_value, exc_trace):
         if self.sql_engine == "MySQL":
             self.sql_connect.commit()
-            self.sql_cursor.close()
+            if self.sql_cursor:
+                self.sql_cursor.close()
             self.sql_connect.close()
 
     def __repr__(self):
@@ -26,4 +28,4 @@ class DBConnector():
 if __name__ == "__main__":
     from src.repo.db.db_config import SQL_CONFIG, SQL_ENGINE
     test = DBConnector(SQL_ENGINE, SQL_CONFIG)
-    print(test)
+    print(dir(test))

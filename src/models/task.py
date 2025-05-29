@@ -5,6 +5,8 @@ class Task:
     GPID : int
     header: str
     description: str
+    #remarks_existing: bool
+    #remarks_count: int
     remarks: str
     extra_status: bool
     time_created: datetime
