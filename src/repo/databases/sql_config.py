@@ -11,5 +11,3 @@ SQL_CONFIG = {
         "password": os.getenv("SQL_PASS"),
         "database": os.getenv("SQL_NAME"),
 }
-
-print(SQL_CONFIG)
