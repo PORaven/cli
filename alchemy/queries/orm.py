@@ -1,11 +1,13 @@
 from models import metadata_obj, WorkersORM
-from database import session_factory, async_session_factory, engine, async_engine
+from database import session_factory, async_session_factory, engine, async_engine, Base
 
 
 
 def create_table():
-    metadata_obj.drop_all(engine)   #Achtung
-    metadata_obj.create_all(engine)
+    #metadata_obj.drop_all(engine)   #Achtung
+    #metadata_obj.create_all(engine)
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
 
 def insert_data():
     with session_factory() as session:
