@@ -18,11 +18,11 @@ class UiMethods:
     @staticmethod
     def print_fouter():
         print("*" * 20)
-
+    '''
     @staticmethod
     def get_input(input_description:str) -> str:
         return str(input(input_description))
-
+    '''
     @staticmethod
     def show_menu(options: list):
         for i, opthion in enumerate(options, 1):

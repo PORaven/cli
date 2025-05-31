@@ -16,7 +16,7 @@ class UiTemplates(UiMethods):
              "Добавить новую задачу",
              "Открыть черновики",
              "Выход"])
-        UiMethods.print_folder()
+        UiMethods.print_fouter()
         '''
         user_input = UiMethods.get_menu_input("Ваш выбор: ")
         return user_input
