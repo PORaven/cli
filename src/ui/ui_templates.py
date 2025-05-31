@@ -14,17 +14,17 @@ class UiTemplates(UiMethods):
             ["Посмотреть список актальных задач",
              "Посмотреть список законченных задач",
              "Добавить новую задачу",
-             "Открыть черновики",
+             "Выполнить задачу",
              "Выход"])
         UiMethods.print_fouter()
         '''
         user_input = UiMethods.get_menu_input("Ваш выбор: ")
         return user_input
         '''
-    def template_main_finished_tasks(self):
+    def template_main_finished_tasks(self, unfinished_list):
         UiMethods.clear_terminal()
         UiMethods.print_header()
-        for task in self.repo.get_finished():
+        for task in unfinished_list:
             UiMethods.display_tasks(task)
         UiMethods.print_header()
         UiMethods.show_menu(["Показать задачу подробнее",

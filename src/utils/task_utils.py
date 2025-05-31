@@ -6,21 +6,23 @@ from src.config.path_config import FILE_PATH
 def _get_existing_gpids(filename: str = "tasks.json") -> Dict[str, List[int]]:
     """Возвращает словарь с существующими GPID из файла, сгруппированными по датам"""
     try:
-        with open(FILE_PATH/filename, 'r', encoding='utf-8') as f:
+        with open(FILE_PATH / filename, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
         gpids = {}
-        
-        # Проверяем задачи в обоих разделах
+        tasks_block = data.get("Задачи", {})
+
         for status in ["Завершены", "Выполняются"]:
-            for task in data["Задачи"].get(status, []):
-                if 'GPID' in task and isinstance(task['GPID'], str) and '-' in task['GPID']:
-                    date_part, num_part = task['GPID'].split('-')
+            for task in tasks_block.get(status, []):
+                if not isinstance(task, dict):
+                    continue
+                gpid = task.get("gpid")
+                if isinstance(gpid, str) and '-' in gpid:
+                    parts = gpid.split('-')
+                    date_part, num_part = parts
                     if date_part.isdigit() and len(date_part) == 8 and num_part.isdigit():
-                        if date_part not in gpids:
-                            gpids[date_part] = []
-                        gpids[date_part].append(int(num_part))
-        
+                        gpids.setdefault(date_part, []).append(int(num_part))
+
         return gpids
     except (FileNotFoundError, json.JSONDecodeError, KeyError):
         return {}
@@ -40,4 +42,4 @@ def generate_GPID(filename: str = "tasks.json") -> str:
                 
 def generate_time() -> datetime:
     now =  datetime.now()
-    return f"{now:%d%m%Y-%H:%M:%S}"
+    return f"{now:%H:%M:%S}"

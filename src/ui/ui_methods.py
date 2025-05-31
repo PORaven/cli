@@ -30,9 +30,9 @@ class UiMethods:
     
     @staticmethod
     def display_tasks(task: Task, need_full: bool = False):
-        print(f"GPID: {task["GPID"]}")
-        print(f"Тема: {task["Тема"]}")
+        print(f"gpid: {task["gpid"]}")
+        print(f"Тема: {task["header"]}")
         if need_full:
-            print(f"Описание задачи: {task["Подробное описание задачи"]}")
-            print(f"Время создания: {task["Время создания"]}")
-            print(f"Срочность: {task["Срочность"]}")
+            print(f"Описание задачи: {task["description"]}")
+            print(f"Время создания: {task["time_created"]}")
+            print(f"Срочность: {task["extra_status"]}")
