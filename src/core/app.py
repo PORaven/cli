@@ -42,7 +42,7 @@ class App():
         actions = {
             "1": self.find_task,
             "2": self.create_task,
-            "3": self.finish_task,
+            "3": self.change_task_status,
             "4": self.back_main
         }
 
@@ -65,7 +65,29 @@ class App():
 
 
     def show_finished_tasks(self):
-        pass
+        action = {
+            "1": self.back_main,
+            "2": self.change_task_status
+        }
+
+        self.ui.clear_terminal()
+        self.ui.print_header()
+        finished = self.json.get_finished()
+        for i, task in enumerate(finished):
+            self.ui.display_tasks(task)
+            if i != len(finished) - 1:
+                self.ui.print_fouter()
+        self.ui.print_header()
+        self.ui.show_menu(
+            ["Вернуться в главное меню",
+            "Сделать задачу снова активной"]
+        )
+        choice = self.service.get_input()
+        action = action.get(choice)
+        if action:
+            action
+        else:
+            print("Некорректный метод!")
 
     def create_task(self):
         task = self.service.create_and_add_task()
