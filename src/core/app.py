@@ -42,7 +42,7 @@ class App():
         actions = {
             "1": self.find_task,
             "2": self.create_task,
-            "3": self.change_task_status,
+            "3": self.finish_task,
             "4": self.back_main
         }
 
@@ -96,7 +96,11 @@ class App():
         else:
             print("Проблема при добавлении задачи")
             
-    def finish_task(self):
+
+    def finish_task():
+        self.servise
+
+    def deactivate_task(self):
         pass
     
     def exit_app(self):
